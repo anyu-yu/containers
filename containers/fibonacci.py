@@ -109,16 +109,16 @@ def fib_yield(n=None):
     f1 = 1
     yield 1
     if n == 1:
-        return None
+        return
     yield 1
     if n == 2:
-        return None
+        return
     i = 3
     while True:
         f2 = f0 + f1
         yield f2
+        i += 1
         f0 = f1
         f1 = f2
-        i += 1
         if n is not None and i > n:
-            return None
+            return
